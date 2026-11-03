@@ -5,7 +5,19 @@ import process from 'node:process'
 import { createBloxSSREntry } from '@bagelink/blox/ssg'
 import { BagelVue, RouterWrapper } from '@bagelink/vue'
 import App from './App.vue'
-import { createRouter } from './router'
+import { createRouter as buildRouter } from './router'
+
+function createRouter(mode: 'web' | 'memory' = 'web', initialUrl?: string) {
+	const router = buildRouter(mode, initialUrl)
+	const original = router.addRoute.bind(router)
+	router.addRoute = ((parent: unknown, route?: unknown) => {
+		if (route === undefined && parent && typeof parent === 'object') {
+			return original('layout', parent as never)
+		}
+		return original(parent as never, route as never)
+	}) as typeof router.addRoute
+	return router
+}
 
 const blocks = import.meta.glob('./components/blocks/*.vue', { eager: true })
 

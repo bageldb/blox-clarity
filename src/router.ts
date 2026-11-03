@@ -11,9 +11,10 @@ export function createRouter(mode: 'web' | 'memory' = 'web', _initialUrl?: strin
 		routes: [
 			{
 				path: '/',
+				name: 'layout',
 				component: Layout,
 				children: [
-					{ path: ':pathMatch(.*)*', component: { template: '<div />' } },
+					{ path: '', name: 'home', component: { template: '<div />' } },
 				],
 			},
 		],
