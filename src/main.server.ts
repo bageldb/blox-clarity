@@ -21,6 +21,8 @@ export const { render } = createBloxSSREntry({
 	modules: blocks as Record<string, any>,
 	websiteName,
 	store: websiteName,
+	locale: 'fr',
+	supportedLocales: ['fr', 'en'],
 	apiBase: process.env.BLOX_API_URL ?? process.env.BAGELINK_API_URL ?? 'https://api.bagel.to',
 	plugins: [[BagelVue, {}]],
 	globalComponents: { RouterWrapper },
