@@ -37,9 +37,11 @@ const props = withDefaults(defineProps<Props>(), { items: () => [] })
 		<div class="w-1100px mx-auto">
 			<h2 class="txt-36 line-height-11 m-0">{{ props.heading }}</h2>
 			<p v-if="props.intro" class="sans line-height-15 measure m-0 mt-1">{{ props.intro }}</p>
-			<ul class="bare grid-2-col m_grid-wrap-1 gap-2 mt-2">
+			<ul class="bare grid grid-2-col m_grid-wrap-1 gap-2 mt-2">
 				<li v-for="(item, i) in props.items" :key="item.slug || item.title || i" class="border-top pt-1">
-					<img v-if="item.image" :src="item.image" :alt="item.title" class="photo" />
+					<div v-if="item.image" class="frame">
+						<img :src="item.image" :alt="item.title || ''" />
+					</div>
 					<h3 class="txt-22 m-0 mt-1">
 						<a v-if="item.slug" :href="'/blog/' + item.slug">{{ item.title }}</a>
 						<template v-else>{{ item.title }}</template>

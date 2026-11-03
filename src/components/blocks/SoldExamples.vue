@@ -58,10 +58,12 @@ function price(value: string | number | undefined) {
 			<p v-if="props.kicker" class="sans txt14 tracking-wide m-0 mb-1">{{ props.kicker }}</p>
 			<h2 class="txt-36 line-height-11 m-0">{{ props.heading }}</h2>
 			<p v-if="props.intro" class="sans line-height-15 measure m-0 mt-1">{{ props.intro }}</p>
-			<ul class="bare grid-wrap-4 m_grid-wrap-1 gap-2 mt-2">
+			<ul class="bare grid grid-wrap-4 m_grid-wrap-1 gap-2 mt-2">
 				<li v-for="(item, i) in props.items" :key="item.slug || item.title || i">
-					<img v-if="item.image" :src="item.image" :alt="item.title" class="photo" />
-					<p v-if="item.category" class="sans txt14 m-0 mt-075">{{ item.category }}</p>
+					<div v-if="item.image" class="frame">
+						<img :src="item.image" :alt="item.title || ''" />
+					</div>
+					<p v-if="item.category" class="sans txt14 quiet m-0 mt-075">{{ item.category }}</p>
 					<h3 class="txt-20 m-0 mt-025">{{ item.title }}</h3>
 					<p class="sans m-0 mt-025">
 						<span v-if="item.carat">{{ item.carat }}</span>

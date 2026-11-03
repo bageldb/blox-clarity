@@ -37,7 +37,7 @@ const props = withDefaults(defineProps<Props>(), {})
 
 <template>
 	<section class="px-2 m_px-1 py-4">
-		<div class="w-1100px mx-auto grid-2-col m_grid-wrap-1 gap-2">
+		<div class="w-1100px mx-auto grid grid-2-col m_grid-wrap-1 gap-2">
 			<div>
 				<h2 class="txt-36 line-height-11 m-0">{{ props.heading }}</h2>
 				<p v-if="props.office_name" class="sans m-0 mt-1">{{ props.office_name }}</p>
@@ -49,7 +49,9 @@ const props = withDefaults(defineProps<Props>(), {})
 					<a :href="'mailto:' + props.email">{{ props.email }}</a>
 				</p>
 			</div>
-			<img v-if="props.image" :src="props.image" :alt="props.image_alt || props.office_name || props.heading" class="photo" />
+			<div v-if="props.image" class="frame">
+				<img :src="props.image" :alt="props.image_alt || props.office_name || props.heading || ''" />
+			</div>
 		</div>
 	</section>
 </template>

@@ -101,21 +101,21 @@ async function submit() {
 
 				<div class="grid-2-col m_grid-wrap-1 gap-1 mt-2">
 					<label class="sans">Prénom
-						<input v-model="first_name" type="text" required class="photo" />
+						<input v-model="first_name" type="text" required class="w-full" />
 					</label>
 					<label class="sans">Nom
-						<input v-model="last_name" type="text" required class="photo" />
+						<input v-model="last_name" type="text" required class="w-full" />
 					</label>
 					<label class="sans">Email
-						<input v-model="email" type="email" required class="photo" />
+						<input v-model="email" type="email" required class="w-full" />
 					</label>
 					<label class="sans">Téléphone
-						<input v-model="phone" type="tel" required class="photo" />
+						<input v-model="phone" type="tel" required class="w-full" />
 					</label>
 				</div>
 
 				<label class="sans block mt-1">Décrivez votre bijou
-					<textarea v-model="message" rows="4" class="photo" placeholder="Poids, forme, certificat, métal…"></textarea>
+					<textarea v-model="message" rows="4" class="w-full" placeholder="Poids, forme, certificat, métal…"></textarea>
 				</label>
 
 				<label class="sans flex gap-075 align-items-start mt-1">

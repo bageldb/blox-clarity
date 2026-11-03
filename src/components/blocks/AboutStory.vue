@@ -33,13 +33,15 @@ const props = withDefaults(defineProps<Props>(), { paragraphs: () => [] })
 
 <template>
 	<section class="px-2 m_px-1 py-4">
-		<div class="w-1100px mx-auto grid-2-col m_grid-wrap-1 gap-2">
+		<div class="w-1100px mx-auto grid grid-2-col m_grid-wrap-1 gap-2">
 			<div>
 				<h2 class="txt-36 line-height-11 m-0">{{ props.heading }}</h2>
 				<p v-for="(p, i) in props.paragraphs" :key="i" class="sans line-height-15 measure m-0 mt-1">{{ p.text }}</p>
 			</div>
 			<figure v-if="props.image" class="m-0">
-				<img :src="props.image" :alt="props.image_alt || props.heading" class="photo" />
+				<div class="frame hero-frame">
+					<img :src="props.image" :alt="props.image_alt || props.heading || ''" />
+				</div>
 				<figcaption v-if="props.caption" class="sans txt14 mt-075">{{ props.caption }}</figcaption>
 			</figure>
 		</div>

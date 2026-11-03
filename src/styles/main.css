@@ -1,14 +1,14 @@
 :root {
-	--bgl-primary: #9a3412;
-	--bgl-bg: #f3eee6;
-	--bgl-font-color: #1c1916;
-	--bgl-muted: #6d655c;
-	--bgl-border-color: rgba(28, 25, 22, 0.14);
+	--bgl-primary: #111111;
+	--bgl-bg: #f7f5f2;
+	--bgl-font-color: #161616;
+	--bgl-muted: #5c5852;
+	--bgl-border-color: rgba(17, 17, 17, 0.12);
 	--bgl-font-display: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
-	--bgl-font: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
-	--bgl-font-size: 17px;
-	--bgl-btn-border-radius: 2px;
-	--bgl-input-border-radius: 2px;
+	--bgl-font: system-ui, -apple-system, 'Segoe UI', sans-serif;
+	--bgl-font-size: 16px;
+	--bgl-btn-border-radius: 0;
+	--bgl-input-border-radius: 0;
 	--bgl-card-border-radius: 0;
 }
 
@@ -106,6 +106,9 @@ table.desk-only { display: table; width: 100%; }
 .toc a { display: flex; align-items: center; min-height: 44px; }
 
 img.photo { width: 100%; height: auto; display: block; }
+.frame { aspect-ratio: 1; overflow: hidden; background: #eceae6; }
+.frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero-frame { aspect-ratio: 4 / 5; }
 .pre { white-space: pre-line; }
 
 @media (max-width: 910px) {
