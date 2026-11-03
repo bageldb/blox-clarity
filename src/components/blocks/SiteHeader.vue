@@ -42,8 +42,7 @@ const open = ref(false)
 
 <template>
 	<div class="nav-sticky">
-		<div class="seal-line"></div>
-		<header class="border-bottom">
+		<header>
 			<div class="w-1100px mx-auto px-2 m_px-1 h-60px flex align-items-center space-between gap-2">
 				<router-link to="/" class="txt-22 decoration-none flex align-items-center" style="letter-spacing: -0.03em">
 					<img v-if="data?.logo" :src="data.logo" alt="" style="height: 28px; width: auto" />

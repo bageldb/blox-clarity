@@ -1,15 +1,17 @@
 :root {
-	--bgl-primary: #111111;
-	--bgl-bg: #f7f5f2;
-	--bgl-font-color: #161616;
-	--bgl-muted: #5c5852;
-	--bgl-border-color: rgba(17, 17, 17, 0.12);
-	--bgl-font-display: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
-	--bgl-font: system-ui, -apple-system, 'Segoe UI', sans-serif;
-	--bgl-font-size: 16px;
+	--bgl-primary: #f4efe6;
+	--bgl-bg: #14171f;
+	--bgl-font-color: #f4efe6;
+	--bgl-muted: #a39b90;
+	--bgl-border-color: rgba(244, 239, 230, 0.16);
+	--bgl-font-display: 'Hanken Grotesk', system-ui, sans-serif;
+	--bgl-font: 'Hanken Grotesk', system-ui, sans-serif;
+	--bgl-font-size: 17px;
 	--bgl-btn-border-radius: 0;
 	--bgl-input-border-radius: 0;
 	--bgl-card-border-radius: 0;
+	--bgl-btn-bg: #f4efe6;
+	--bgl-btn-color: #14171f;
 }
 
 body {
@@ -106,9 +108,11 @@ table.desk-only { display: table; width: 100%; }
 .toc a { display: flex; align-items: center; min-height: 44px; }
 
 img.photo { width: 100%; height: auto; display: block; }
-.frame { aspect-ratio: 1; overflow: hidden; background: #eceae6; }
+.frame { aspect-ratio: 1; overflow: hidden; background: #1c2030; }
 .frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.hero-frame { aspect-ratio: 4 / 5; }
+.stone { min-height: 88vh; display: grid; align-items: end; }
+.stone img { width: min(64vh, 70%); height: auto; justify-self: center; }
+.sheet { background: #1c2030; }
 .pre { white-space: pre-line; }
 
 @media (max-width: 910px) {

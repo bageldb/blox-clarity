@@ -42,11 +42,10 @@ const props = withDefaults(defineProps<Props>(), {})
 </script>
 
 <template>
-	<section class="px-2 m_px-1 py-4">
-		<div class="w-1100px mx-auto grid grid-2-col m_grid-wrap-1 gap-2 align-items-center">
-			<div>
-				<p v-if="props.kicker" class="sans txt14 tracking-wide m-0 mb-1">{{ props.kicker }}</p>
-				<h1 class="display m-0">{{ props.heading }}</h1>
+	<section class="px-2 m_px-1">
+		<div class="w-1100px mx-auto grid grid-2-col m_grid-wrap-1 gap-3 stone">
+			<div class="pb-4">
+				<h1 class="txt-36 line-height-11 m-0">{{ props.heading }}</h1>
 				<p v-if="props.subheading" class="sans line-height-15 measure m-0 mt-1">{{ props.subheading }}</p>
 				<div class="flex gap-1 wrap mt-2">
 					<a v-if="props.primary_label" class="bgl_btn" :href="props.primary_href || '/contact'">{{ props.primary_label }}</a>
@@ -54,10 +53,8 @@ const props = withDefaults(defineProps<Props>(), {})
 				</div>
 			</div>
 			<figure v-if="props.image" class="m-0">
-				<div class="frame hero-frame">
-					<img :src="props.image" :alt="props.image_alt || props.heading" />
-				</div>
-				<figcaption v-if="props.caption" class="sans txt14 quiet mt-075">{{ props.caption }}</figcaption>
+				<img :src="props.image" :alt="props.image_alt || ''" />
+				<figcaption v-if="props.caption" class="txt14 quiet mt-075">{{ props.caption }}</figcaption>
 			</figure>
 		</div>
 	</section>
