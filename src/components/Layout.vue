@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import SiteNav from './SiteNav.vue'
-import SiteFooter from './SiteFooter.vue'
+import SiteHeader from './blocks/SiteHeader.vue'
+import SiteFooter from './blocks/SiteFooter.vue'
 </script>
 
 <template>
 	<div>
-		<SiteNav />
+		<SiteHeader />
 		<main id="content">
 			<router-view />
 		</main>
