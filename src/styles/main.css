@@ -105,6 +105,9 @@ table.desk-only { display: table; width: 100%; }
 }
 .toc a { display: flex; align-items: center; min-height: 44px; }
 
+img.photo { width: 100%; height: auto; display: block; }
+.pre { white-space: pre-line; }
+
 @media (max-width: 910px) {
 	.guide-layout { grid-template-columns: 1fr; gap: 2rem; }
 	.guide-layout > header,

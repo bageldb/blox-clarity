@@ -35,7 +35,7 @@ const props = withDefaults(defineProps<Props>(), {})
 			<h2 class="txt-36 line-height-11 m-0">{{ props.heading }}</h2>
 			<p v-if="props.text" class="sans line-height-15 measure m-0 mt-1">{{ props.text }}</p>
 			<p v-if="props.cta_label" class="mt-2 m-0">
-				<a class="btn" :href="props.cta_href || '/contact'">{{ props.cta_label }}</a>
+				<a class="bgl_btn" :href="props.cta_href || '/contact'">{{ props.cta_label }}</a>
 			</p>
 		</div>
 	</section>

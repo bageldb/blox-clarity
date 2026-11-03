@@ -36,18 +36,18 @@ const props = withDefaults(defineProps<Props>(), { steps: () => [] })
 <template>
 	<section class="px-2 m_px-1 py-4">
 		<div class="w-1100px mx-auto">
-			<p v-if="props.kicker" class="sans txt-14 letter-spacing-02 m-0 mb-1">{{ props.kicker }}</p>
+			<p v-if="props.kicker" class="sans txt14 tracking-wide m-0 mb-1">{{ props.kicker }}</p>
 			<h2 class="txt-36 line-height-11 m-0">{{ props.heading }}</h2>
 			<p v-if="props.intro" class="sans line-height-15 measure m-0 mt-1">{{ props.intro }}</p>
-			<ol class="bare grid-4 t_grid-2 m_grid-1 gap-2 mt-2">
+			<ol class="bare grid-wrap-4 m_grid-wrap-1 gap-2 mt-2">
 				<li v-for="(step, i) in props.steps" :key="step.title || i" class="border-top pt-1">
-					<p class="sans txt-14 m-0">{{ String(i + 1).padStart(2, '0') }}</p>
+					<p class="sans txt14 m-0">{{ String(i + 1).padStart(2, '0') }}</p>
 					<h3 class="txt-22 m-0 mt-05">{{ step.title }}</h3>
 					<p class="sans line-height-15 m-0 mt-075">{{ step.text }}</p>
 				</li>
 			</ol>
 			<p v-if="props.cta_label" class="mt-2 m-0">
-				<a class="btn" :href="props.cta_href || '/contact'">{{ props.cta_label }}</a>
+				<a class="bgl_btn" :href="props.cta_href || '/contact'">{{ props.cta_label }}</a>
 			</p>
 		</div>
 	</section>

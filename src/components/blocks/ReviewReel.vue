@@ -35,13 +35,13 @@ const props = withDefaults(defineProps<Props>(), { items: () => [] })
 <template>
 	<section class="px-2 m_px-1 py-4">
 		<div class="w-1100px mx-auto">
-			<p v-if="props.kicker" class="sans txt-14 letter-spacing-02 m-0 mb-1">{{ props.kicker }}</p>
+			<p v-if="props.kicker" class="sans txt14 tracking-wide m-0 mb-1">{{ props.kicker }}</p>
 			<h2 class="txt-36 line-height-11 m-0">{{ props.heading }}</h2>
-			<ul class="bare grid-4 t_grid-2 m_grid-1 gap-2 mt-2">
+			<ul class="bare grid-wrap-4 m_grid-wrap-1 gap-2 mt-2">
 				<li v-for="(item, i) in props.items" :key="item.name || i" class="border-top pt-1">
-					<img v-if="item.image" :src="item.image" :alt="item.name" class="w-100" />
+					<img v-if="item.image" :src="item.image" :alt="item.name" class="photo" />
 					<p v-if="item.quote" class="sans line-height-15 m-0 mt-1">“{{ item.quote }}”</p>
-					<p class="sans txt-14 m-0 mt-075">
+					<p class="sans txt14 m-0 mt-075">
 						<strong>{{ item.name }}</strong>
 						<span v-if="item.rating"> · {{ item.rating }}/5</span>
 					</p>

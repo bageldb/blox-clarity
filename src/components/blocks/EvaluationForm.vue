@@ -84,7 +84,7 @@ async function submit() {
 <template>
 	<section class="px-2 m_px-1 py-4">
 		<div class="w-1100px mx-auto">
-			<p v-if="props.kicker" class="sans txt-14 letter-spacing-02 m-0 mb-1">{{ props.kicker }}</p>
+			<p v-if="props.kicker" class="sans txt14 tracking-wide m-0 mb-1">{{ props.kicker }}</p>
 			<h2 class="txt-36 line-height-11 m-0">{{ props.heading }}</h2>
 			<p v-if="props.intro" class="sans line-height-15 measure m-0 mt-1">{{ props.intro }}</p>
 
@@ -99,23 +99,23 @@ async function submit() {
 					</label>
 				</fieldset>
 
-				<div class="grid-2 m_grid-1 gap-1 mt-2">
+				<div class="grid-2-col m_grid-wrap-1 gap-1 mt-2">
 					<label class="sans">Prénom
-						<input v-model="first_name" type="text" required class="w-100" />
+						<input v-model="first_name" type="text" required class="photo" />
 					</label>
 					<label class="sans">Nom
-						<input v-model="last_name" type="text" required class="w-100" />
+						<input v-model="last_name" type="text" required class="photo" />
 					</label>
 					<label class="sans">Email
-						<input v-model="email" type="email" required class="w-100" />
+						<input v-model="email" type="email" required class="photo" />
 					</label>
 					<label class="sans">Téléphone
-						<input v-model="phone" type="tel" required class="w-100" />
+						<input v-model="phone" type="tel" required class="photo" />
 					</label>
 				</div>
 
 				<label class="sans block mt-1">Décrivez votre bijou
-					<textarea v-model="message" rows="4" class="w-100" placeholder="Poids, forme, certificat, métal…"></textarea>
+					<textarea v-model="message" rows="4" class="photo" placeholder="Poids, forme, certificat, métal…"></textarea>
 				</label>
 
 				<label class="sans flex gap-075 align-items-start mt-1">

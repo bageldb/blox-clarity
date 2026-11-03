@@ -31,12 +31,12 @@ const props = withDefaults(defineProps<Props>(), {})
 
 <template>
 	<section class="px-2 m_px-1 py-4">
-		<div class="w-1100px mx-auto grid-2 m_grid-1 gap-2 align-items-center">
+		<div class="w-1100px mx-auto grid-2-col m_grid-wrap-1 gap-2 align-items-center">
 			<div>
 				<h1 class="txt-48 m_txt-36 line-height-11 m-0">{{ props.heading }}</h1>
 				<p v-if="props.lead" class="sans line-height-15 measure m-0 mt-1">{{ props.lead }}</p>
 			</div>
-			<img v-if="props.image" :src="props.image" :alt="props.image_alt || props.heading" class="w-100" />
+			<img v-if="props.image" :src="props.image" :alt="props.image_alt || props.heading" class="photo" />
 		</div>
 	</section>
 </template>

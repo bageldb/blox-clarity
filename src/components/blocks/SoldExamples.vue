@@ -55,20 +55,20 @@ function price(value: string | number | undefined) {
 <template>
 	<section class="px-2 m_px-1 py-4">
 		<div class="w-1100px mx-auto">
-			<p v-if="props.kicker" class="sans txt-14 letter-spacing-02 m-0 mb-1">{{ props.kicker }}</p>
+			<p v-if="props.kicker" class="sans txt14 tracking-wide m-0 mb-1">{{ props.kicker }}</p>
 			<h2 class="txt-36 line-height-11 m-0">{{ props.heading }}</h2>
 			<p v-if="props.intro" class="sans line-height-15 measure m-0 mt-1">{{ props.intro }}</p>
-			<ul class="bare grid-4 t_grid-2 m_grid-1 gap-2 mt-2">
+			<ul class="bare grid-wrap-4 m_grid-wrap-1 gap-2 mt-2">
 				<li v-for="(item, i) in props.items" :key="item.slug || item.title || i">
-					<img v-if="item.image" :src="item.image" :alt="item.title" class="w-100" />
-					<p v-if="item.category" class="sans txt-14 m-0 mt-075">{{ item.category }}</p>
+					<img v-if="item.image" :src="item.image" :alt="item.title" class="photo" />
+					<p v-if="item.category" class="sans txt14 m-0 mt-075">{{ item.category }}</p>
 					<h3 class="txt-20 m-0 mt-025">{{ item.title }}</h3>
 					<p class="sans m-0 mt-025">
 						<span v-if="item.carat">{{ item.carat }}</span>
 						<span v-if="item.carat && item.sale_price"> · </span>
 						<span v-if="item.sale_price">{{ price(item.sale_price) }}</span>
 					</p>
-					<p v-if="item.description" class="sans txt-14 line-height-15 m-0 mt-075">{{ item.description }}</p>
+					<p v-if="item.description" class="sans txt14 line-height-15 m-0 mt-075">{{ item.description }}</p>
 				</li>
 			</ul>
 		</div>
