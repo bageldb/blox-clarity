@@ -9,16 +9,9 @@ export function createRouter(mode: 'web' | 'memory' = 'web', _initialUrl?: strin
 	const router = _createRouter({
 		history,
 		routes: [
-			{
-				path: '/',
-				component: Layout,
-				children: [
-					{ path: ':pathMatch(.*)*', name: 'page', component: { template: '<div />' } },
-				],
-			},
+			{ path: '/', component: Layout },
 		],
-		scrollBehavior(to) {
-			if (to.hash) return { behavior: 'smooth', el: to.hash }
+		scrollBehavior() {
 			return { top: 0 }
 		},
 	})
