@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "vite build && bun run build:prerender && bun run ssg && bun run assert:output",
     "build:prerender": "vite build --ssr",
-    "ssg": "blox-ssg / /about /why-sell-with-us /how-it-works /blog /contact > /tmp/ssg.log 2>&1 || (mkdir -p dist && cp /tmp/ssg.log dist/index.html)",
+    "ssg": "blox-ssg / /about /why-sell-with-us /how-it-works /blog /contact",
     "ssg:dev": "blox-ssg --mode=development",
     "ssg:local": "blox-ssg --mode=localhost",
     "assert:output": "test -f dist/index.html && test -f dist/.blox-manifest.json",

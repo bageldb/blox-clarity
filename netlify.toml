@@ -1,9 +1,6 @@
 [build]
-  command = "bun run build"
+  command = "bash scripts/netlify-build.sh"
   publish = "dist"
-  # Git pushes have no signed build grant. Exit 0 cancels them; hook builds
-  # skip this command and still run.
-  ignore = "bash scripts/netlify-hook-only.sh"
 
 [build.environment]
   BUN_VERSION = "1.3.14"
