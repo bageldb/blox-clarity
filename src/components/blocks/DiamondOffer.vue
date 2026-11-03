@@ -45,9 +45,10 @@ const props = withDefaults(defineProps<Props>(), {})
 	<section class="px-2 m_px-1">
 		<div class="w-1100px mx-auto grid grid-2-col m_grid-wrap-1 gap-3 stone">
 			<div class="pb-4">
-				<h1 class="txt-36 line-height-11 m-0">{{ props.heading }}</h1>
-				<p v-if="props.subheading" class="sans line-height-15 measure m-0 mt-1">{{ props.subheading }}</p>
-				<div class="flex gap-1 wrap mt-2">
+				<p v-if="props.kicker" class="txt14 quiet m-0 mb-1">{{ props.kicker }}</p>
+				<h1 class="display m-0">{{ props.heading }}</h1>
+				<p v-if="props.subheading" class="txt-18 line-height-15 measure m-0 mt-1">{{ props.subheading }}</p>
+				<div class="flex gap-1 flex-wrap mt-2">
 					<a v-if="props.primary_label" class="bgl_btn" :href="props.primary_href || '/contact'">{{ props.primary_label }}</a>
 					<a v-if="props.secondary_label" class="bgl_btn bgl_btn-ghost" :href="props.secondary_href || '/how-it-works'">{{ props.secondary_label }}</a>
 				</div>

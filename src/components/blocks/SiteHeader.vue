@@ -48,8 +48,9 @@ const open = ref(false)
 					<img v-if="data?.logo" :src="data.logo" alt="" style="height: 28px; width: auto" />
 					<span v-else>{{ data?.brand || fallback.brand }}</span>
 				</router-link>
-				<nav class="desk-nav gap-1-5 align-items-center sans" aria-label="Pages">
-					<router-link v-for="link in data?.links?.length ? data.links : fallback.links" :key="link.to" :to="link.to" class="txt13 decoration-none quiet">{{ link.label }}</router-link>
+				<nav class="desk-nav gap-1-5 align-items-center" aria-label="Pages">
+					<router-link v-for="link in data?.links?.length ? data.links : fallback.links" :key="link.to" :to="link.to" class="txt14 decoration-none">{{ link.label }}</router-link>
+					<a href="/en" class="txt14 decoration-none quiet">EN</a>
 				</nav>
 				<Btn class="mob-toggle" flat :icon="open ? 'close' : 'menu'" :aria-label="open ? 'Fermer le menu' : 'Ouvrir le menu'" @click="open = !open" />
 			</div>
