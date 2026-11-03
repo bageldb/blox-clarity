@@ -12,12 +12,4 @@ if [ -z "${INCOMING_HOOK_BODY:-}" ]; then
 	export INCOMING_HOOK_BODY
 fi
 
-if ! bun run build > /tmp/build.log 2>&1; then
-	mkdir -p dist
-	{
-		echo '<pre>'
-		tail -c 6000 /tmp/build.log
-		echo '</pre>'
-	} > dist/index.html
-	exit 0
-fi
+bun run build

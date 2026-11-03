@@ -99,7 +99,7 @@ async function load(name: string) {
 	for (const field of fields.value) values[field.name] = field.kind === 'checkbox' ? false : ''
 }
 
-watch(() => props.form, (name) => { if (name) load(name) }, { immediate: true })
+watch(() => props.form, (name) => { if (name && typeof window !== 'undefined') load(name) }, { immediate: true })
 
 async function submit() {
 	if (!props.form || sending.value) return
