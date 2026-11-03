@@ -7,6 +7,10 @@ import { BagelVue, RouterWrapper } from '@bagelink/vue'
 import App from './App.vue'
 import { createRouter } from './router'
 
+import '@bagelink/vue/styles/core.css'
+import '@bagelink/blox/style.css'
+import '@/styles/main.css'
+
 const blocks = import.meta.glob('./components/blocks/*.vue', { eager: true })
 
 const websiteName = process.env.BLOX_WEBSITE_NAME ?? process.env.WEBSITE_NAME ?? 'Clarity'
