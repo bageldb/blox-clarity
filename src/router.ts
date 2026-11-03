@@ -1,4 +1,5 @@
 import { createRouter as _createRouter, createWebHistory, createMemoryHistory } from 'vue-router'
+import { CmsPageView } from '@bagelink/blox'
 import Layout from '@/components/Layout.vue'
 
 export function createRouter(mode: 'web' | 'memory' = 'web', _initialUrl?: string) {
@@ -14,7 +15,7 @@ export function createRouter(mode: 'web' | 'memory' = 'web', _initialUrl?: strin
 				name: 'layout',
 				component: Layout,
 				children: [
-					{ path: '', name: 'home', component: { template: '<div />' } },
+					{ path: ':pathMatch(.*)*', name: 'page', component: CmsPageView },
 				],
 			},
 		],
