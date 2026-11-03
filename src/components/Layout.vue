@@ -6,7 +6,7 @@ import SiteFooter from './SiteFooter.vue'
 <template>
 	<div>
 		<SiteNav />
-		<main>
+		<main id="content">
 			<router-view />
 		</main>
 		<SiteFooter />

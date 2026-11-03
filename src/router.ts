@@ -9,7 +9,13 @@ export function createRouter(mode: 'web' | 'memory' = 'web', _initialUrl?: strin
 	const router = _createRouter({
 		history,
 		routes: [
-			{ path: '/', component: Layout },
+			{
+				path: '/',
+				component: Layout,
+				children: [
+					{ path: ':pathMatch(.*)*', component: { template: '<div />' } },
+				],
+			},
 		],
 		scrollBehavior() {
 			return { top: 0 }
