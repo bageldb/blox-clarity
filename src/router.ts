@@ -15,6 +15,7 @@ export function createRouter(mode: 'web' | 'memory' = 'web', _initialUrl?: strin
 				name: 'layout',
 				component: Layout,
 				children: [
+					{ path: '', name: 'home', component: CmsPageView },
 					{ path: ':pathMatch(.*)*', name: 'page', component: CmsPageView },
 				],
 			},
