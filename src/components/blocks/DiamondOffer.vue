@@ -54,7 +54,9 @@ const props = withDefaults(defineProps<Props>(), {})
 				</div>
 			</div>
 			<figure v-if="props.image" class="m-0">
-				<img :src="props.image" :alt="props.image_alt || ''" />
+				<div class="frame hero-frame">
+					<img :src="props.image" :alt="props.image_alt || ''" />
+				</div>
 				<figcaption v-if="props.caption" class="txt14 quiet mt-075">{{ props.caption }}</figcaption>
 			</figure>
 		</div>
